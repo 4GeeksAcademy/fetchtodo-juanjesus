@@ -1,11 +1,105 @@
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+}
 
-*/
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: coral;
+}
+
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+
+.card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  perspective: 1000px;
+  margin: 0.5rem auto;
+  border-radius: 1rem;
+}
+
+
+.card-body {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.12);
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+  color: coral;
+  padding: 1rem;
+  border: 1px solid coral;
+  border-radius: 1rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+  color: coral;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+     bisque 40%, rgb(255, 185, 160) 78%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.trash-btn {
+  margin-left: auto; 
+  cursor: pointer;
+}
